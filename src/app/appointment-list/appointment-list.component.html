@@ -1,0 +1,12 @@
+<h1 class="head">Appointment-App</h1>
+<p class="below-head">Create New Appointment</p>
+<div class="editInput">
+    <input [(ngModel)]="newappointmentname"  type="text" placeholder="Appointment-name">
+    <input [(ngModel)]="newappointmentdate"  type="Date" >
+    <button (click)="AddAppointment()">Add-Appointment</button>
+</div>
+
+<li *ngFor="let appointment of appointments; index as i">
+     {{appointment.id}} {{appointment.name}} {{appointment.date}}
+     <button (click)="DeleteAppointment(i)">delete</button>
+</li>
